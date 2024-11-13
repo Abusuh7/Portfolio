@@ -39,35 +39,36 @@ const Project = () => {
               date="Oct 29, 2024"
               CardTitle="Early Detection of Leukemia Subtypes Using CNN and XAI (Novel Approach)"
               CardDescription="Developed a novel approach for early detection of leukemia subtypes using Convolutional Neural Networks (CNN) and Explainable AI (XAI) to improve diagnostic accuracy and interpretability."
-              href={"/project/1"}
+              href={"/Portfolio/Project/1"}
               image="https://riskandinsurance.com/wp-content/uploads/2024/04/AI-in-Healthcare_1489956013_700x525.jpg"
             />
             <ProjectCard
-              date="Oct 10, 2024"
-              CardTitle="Dream Streamer Music Platform"
-              CardDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+              date="Sep 15, 2024"
+              CardTitle="Dream Streamer -  Music Platform Using Vue.js, AWS, and MySQL"
+              CardDescription="Developed a comprehensive music streaming platform similar to Spotify using Vue.js for the frontend, AWS services for hosting, storage, and deployment, and MySQL for the database management."
+              href={"/Portfolio/project/2"}
               image="https://plus.unsplash.com/premium_photo-1663100749349-14687e320b5c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
             <ProjectCard
-              date="Dec 22, 2023"
-              CardTitle="Meet AutoManage, the best AI management tools"
-              CardDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-              href={"/project/2"}
-              image="https://i.ibb.co/7jdcnwn/image-03.jpg"
+              date="Aug 22, 2024"
+              CardTitle="SYOS - A ERP System for Small Grocery Store Using JAVA and MySQL"
+              CardDescription="Developed an ERP system tailored for small grocery stores using Java with no framework for the backend and MySQL for the database, streamlining inventory management, sales tracking, and reporting."
+              href={"/Portfolio/project/3"}
+              image="https://plus.unsplash.com/premium_photo-1683121143788-8c5d16f88218?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
             <ProjectCard
               date="Dec 22, 2023"
-              CardTitle="Meet AutoManage, the best AI management tools"
-              CardDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-              href={"/project/3"}
-              image="https://i.ibb.co/7jdcnwn/image-03.jpg"
+              CardTitle="First Motors - A Car Dealership Website With CRM Build Using Laravel and MySQL"
+              CardDescription="Built a car dealership website with an integrated Customer Relationship Management (CRM) system using Laravel for the backend and MySQL for the database, enhancing customer management and sales tracking."
+              href={"/Portfolio/project/4"}
+              image="https://images.unsplash.com/photo-1625773049545-fb23fc4f4538?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
             <ProjectCard
               date="Dec 22, 2023"
-              CardTitle="Meet AutoManage, the best AI management tools"
-              CardDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-              href={"/project/4"}
-              image="https://i.ibb.co/7jdcnwn/image-03.jpg"
+              CardTitle="Crafty Furniture - An E-commerce Mobile App Build Using Flutter(Dart) and MySQL"
+              CardDescription="Developed an e-commerce mobile app for Crafty Furniture using Flutter (Dart) for the frontend and MySQL for the backend, enabling users to browse, search, and purchase furniture products with a seamless user experience."
+              href={"/Portfolio/project/5"}
+              image="https://images.unsplash.com/photo-1680503397107-475907e4f3e3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
             <div
               aria-hidden="true"

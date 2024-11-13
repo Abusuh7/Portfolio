@@ -1,22 +1,35 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 // Pages and Components
 import Project from "./components/projects";
 import AboutMe from "./components/aboutme";
+import Framework from "./components/frameworks";
+import Languages from "./components/languages";
 
 const navigation = [
   { name: "Home", href: "#" },
-  { name: "About Me", href: "#" },
-  { name: "Projects", href: "#" },
+  { name: "About Me", href: "#about-me" },
+  { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#" },
 ];
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Create refs for each section
+  const aboutMeRef = useRef(null);
+  const projectRef = useRef(null);
+
+  // Function to handle scrolling to a section
+  const scrollToSection = (sectionRef) => {
+    if (sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="bg-white">
@@ -47,13 +60,17 @@ export default function Home() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
+                onClick={() => {
+                  if (item.name === "About Me") scrollToSection(aboutMeRef);
+                  else if (item.name === "Projects")
+                    scrollToSection(projectRef);
+                }}
                 className="text-sm/6 font-semibold text-gray-900"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -91,13 +108,19 @@ export default function Home() {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <a
+                    <button
                       key={item.name}
-                      href={item.href}
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        if (item.name === "About Me")
+                          scrollToSection(aboutMeRef);
+                        else if (item.name === "Projects")
+                          scrollToSection(projectRef);
+                      }}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                     >
                       {item.name}
-                    </a>
+                    </button>
                   ))}
                 </div>
                 <div className="py-6">
@@ -173,7 +196,7 @@ export default function Home() {
         </div>
       </div>
       {/* About Me Section */}
-      <div className="bg-gray-50">
+      <div ref={aboutMeRef} className="bg-gray-50">
         <div className="relative isolate px-6 pt-14 lg:px-8">
           <div className="text-center">
             <h2 className="text-xl mb-2 font-bold text-gray-900 sm:text-1xl">
@@ -194,7 +217,7 @@ export default function Home() {
         </div>
       </div>
       {/* Projects Done */}
-      <div className="bg-gray-50">
+      <div ref={projectRef} className="bg-gray-50">
         <div className="relative isolate px-6 pt-14 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-semibold text-gray-900 sm:text-4xl">
@@ -208,10 +231,33 @@ export default function Home() {
               </a>
             </p>
           </div>
-          <div className="mt-16">
+          <div className="mt-8">
             <Project />
           </div>
         </div>
+      </div>
+
+      {/* Frameworks Used */}
+      <div className="bg-gray-50">
+        <div className="relative isolate px-6 pt-10 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-semibold text-gray-900 sm:text-4xl">
+              Frameworks I've Used
+            </h2>
+            <p className="mt-4 text-lg text-gray-500 sm:text-xl/8">
+              I've worked with a variety of frameworks and libraries to bring
+              your projects to life. Here are some of the tools I use.
+            </p>
+          </div>
+          <div className="mt-8">
+            <Framework />
+          </div>
+        </div>
+      </div>
+
+      {/* Languages */}
+      <div className="bg-gray-50"> 
+            <Languages />
       </div>
     </div>
   );

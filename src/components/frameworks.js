@@ -44,6 +44,22 @@ const brandsData = [
     altText: "NextJS",
     link: "#",
   },
+  {
+    imageSrc:
+      "https://static.wixstatic.com/media/2a2ba0_edeb856390be432bb46f4f33a4a91f4f~mv2.png/v1/fill/w_1000,h_336,al_c,q_85,usm_0.66_1.00_0.01/2a2ba0_edeb856390be432bb46f4f33a4a91f4f~mv2.png",
+    lightImageSrc:
+      "https://cdn.tailgrids.com/2.2/assets/images/brands/graygrids-white.svg",
+    altText: "Reactjs",
+    link: "#",
+  },
+  {
+    imageSrc:
+      "https://miro.medium.com/v2/resize:fit:500/1*CPDIH8BWrGipHRJ6o6E2Vw.png",
+    lightImageSrc:
+      "https://cdn.tailgrids.com/2.2/assets/images/brands/graygrids-white.svg",
+    altText: "Reactjs",
+    link: "#",
+  },
 ];
 
 export default function Framework() {
